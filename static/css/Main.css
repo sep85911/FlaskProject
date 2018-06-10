@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(43, 43, 43);
+    /* background-color: white; */
+    margin:0px;
+}
+
+.nav {
+    border-style: solid;
+    border-width: 2px;
+    border-color: chocolate;
+    color:white;
+    font-size: 0px;
+}
+
+.list-btn {
+    list-style-type: none;
+    display: inline-block;
+    font-size: 16px;
+    padding:20px;
+}
+
+.list-btn-right {
+    float:right;
+    margin:0px 20px;
+}
+
+.list-btn:hover {
+    background-color: chocolate;
+    color:black;
+    cursor: pointer;
+    box-shadow: 2px;
+}
