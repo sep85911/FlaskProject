@@ -1,6 +1,7 @@
 body {
     background-color: rgb(43, 43, 43);
     /* background-color: white; */
+    color:white;
     margin:0px;
 }
 
@@ -29,4 +30,32 @@ body {
     color:black;
     cursor: pointer;
     box-shadow: 2px;
+}
+
+#main {
+    margin:0px 0px;
+
+    padding: 14px;
+}
+
+#form1 {
+    margin:0px 0px;
+    border-style: solid;
+    border-color: chocolate;
+    border-width:1px;
+    width:956px;
+    /* margin:0px auto; */
+    display: inline-block;
+    /* text-align: center; */
+}
+
+#form2 {
+    margin:0px 0px;
+    border-style: solid;
+    border-color: chocolate;
+    width:956px;
+    border-width:1px;
+    /* margin:0px auto; */
+    display: inline-block;
+    /* text-align: center; */
 }
