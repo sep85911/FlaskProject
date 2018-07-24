@@ -1,0 +1,38 @@
+body{
+    /* background-color:black; */
+    margin:0px;
+}
+
+#guide-top {
+    background-color:#e3e4e5;
+    height:31px;
+}
+
+.guide-top-btn li{
+    display:inline-block;
+    margin-top:3px;
+    list-style-type: none;
+
+}
+
+.guide-top-btn a{
+    margin-top:3px;
+    font-size:smaller;
+    color:gray;
+    text-decoration: none;
+}
+
+.guide-top-btn li a{
+    font-size:smaller;
+    color:gray;
+    text-decoration: none;
+}
+
+
+#guide-top-btn li.spacer{
+    /* overflow: hidden;
+    margin: 11px 5px 0; */
+    width: 1px;
+    height: 10px;
+    background-color: #ccc;
+}
