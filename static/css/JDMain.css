@@ -9,9 +9,8 @@ body{
 }
 
 .w {
-    width:1280px;
+    width:1200px;
     height:31px;
-    background-color:#cadbe69f;
     margin:0 auto;
 }
 
@@ -49,18 +48,30 @@ body{
 }
 
 .head-part2 ul li{
+    margin:0px;
     display:inline-block;
 }
 
 .head-text {
+    margin:0px 0px;
+    padding:0px 16px;
+    font-size: x-small;
+    color:gray;
+}
+
+.head-text:hover {
+    color:red;
+    cursor: pointer;
+}
+
+.head-text-login {
     margin:6px 0px;
-    padding:0px 10px;
     font-size: x-small;
     color:gray;
     text-align:center;
 }
 
-.head-text:hover {
+.head-text-login:hover {
     color:red;
     cursor: pointer;
 }
@@ -73,4 +84,38 @@ body{
     background-color: #ccc;
     overflow: hidden;
     cursor:pointer;
+}
+
+.head-submenu {
+    margin-top:8px;
+    width:160px;
+    text-align:left;
+    position: absolute;
+    border-style:solid;
+    border-width: 1px;
+    border-color:rgb(202, 202, 202);
+    /* display: none; */
+}
+
+.head-downlist:hover {
+    border-width:1px;
+    background-color: white;
+    border-bottom-color: white;
+    border-color:rgb(202, 202, 202);
+    border-style: solid;
+}
+
+.head-subtext{
+    float:left;
+    padding:8px 16px;
+    font-size: x-small;
+    color:gray;
+}
+
+.head-subtext a{
+    color:gray;
+    text-decoration: none;
+}
+.head-subtext a:hover{
+    color:red;
 }
