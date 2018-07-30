@@ -50,9 +50,8 @@ body{
 .head-downlist {    
     border-width:1px;
     border-style: solid;
-    border-color:white;
-    background-color: white;
-    border-bottom-color: rgb(164, 209, 1);
+    border-color:#e3e4e5;
+    /* border-bottom-color: #e3e4e5; */
     position: relative;
 }
 
@@ -60,12 +59,15 @@ body{
     color:red;
     cursor: pointer;
     background-color: white;
-    border-color:rgb(202, 202, 202);
+    border-top-color:rgb(202, 202, 202);
+    border-left-color:rgb(202, 202, 202);
+    border-right-color:rgb(202, 202, 202);
     border-bottom-color: white;
 }
 
 .head-downlist:hover .head-submenu{
-    visibility: visible;
+    /* visibility: visible; */
+    background-color: white;
 }
 
 .head-text {
@@ -75,11 +77,18 @@ body{
     color:gray;
     z-index: 2;
     position: relative;
+    border-width:1px;
+    border-style: solid;
+    border-color:#e3e4e5;
 }
 
 .head-text:hover{
     color:red;
     cursor: pointer;
+    border-width:1px;
+    border-style: solid;
+    border-color:#e3e4e5;
+    background-color: white;
 }
 
 .head-text-login {
@@ -104,13 +113,15 @@ body{
 }
 
 .head-submenu {
-    margin:-6px -1px;
+    margin:6px 0px;
     width:160px;
     border-style:solid;
     border-width: 1px;
-    border-color:rgb(214, 17, 17);
+    border-color:rgb(202, 202, 202);
+    background-color: white;
     z-index: 1;
     position: absolute;
+    visibility: hidden;
 }
 
 .head-subtext{
