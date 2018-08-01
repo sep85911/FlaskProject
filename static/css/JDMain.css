@@ -40,33 +40,33 @@ body{
     margin:0px;
     padding:0px;
     display: inline-block;
+    line-height: 31px;
+
 }
 
 .head-ul-li div{
     margin:0px;
-    padding:0px 10px;
-    line-height:31px;
-}
-
-.head-ul-li div:hover .menu{
-    visibility: visible;
-}
-
-.head-ul-li div div{    
-    border-width: 1px;
-    border-style: solid;
-    border-color:#106ac5;
-    line-height:29px;
+    padding:0px;
 }
 
 .head-link {
     color:gray;
     text-decoration:none;
+    padding:0px 10px;
+    border-width:1px;
+    border-style: solid;
+    border-color: #e3e4e5;
+    line-height: 29px;
 }
 
 .head-link:hover {
     color:red;
     text-decoration:none;
+}
+
+.downlist {
+    margin:0px;
+    padding:0px;
 }
 
 .menu {
