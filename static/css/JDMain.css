@@ -16,122 +16,60 @@ body{
 
 .head-part1 {
     width: 250px;
-    height:inherit;
     text-align: right;
     float:left;
     font-size: x-small;
+    padding:7px 0px;
 }
 
-.head-text-r {
-    margin:0px;
-    padding:5px 0px;
+.head-text-right {
     color:gray;
 }
 
-.head-text-r:hover {
-    cursor: pointer;
-    color:red;
-}
-
-.head-part2{
+.head-part2 {
     float:right;
-    margin:0px;
-    /* padding:5px 0px; */
+    font-size: x-small;
 }
 
-.head-part2 ul{
+.head-ul{
     list-style-type: none;
-    text-align: right;
-    font-size: 0px;
-}
-
-.head-part2 ul li{
-    display:inline-block;
-}
-
-.head-downlist {    
-    /* border-width:1px; */
-    /* border-style: solid; */
-    /* border-color:#e3e4e5; */
-    /* border-bottom-color: #e3e4e5; */
-    position: relative;
-}
-
-.head-downlist:hover {
-    color:red;
-    cursor: pointer;
-    background-color: white;
-    border-top-color:rgb(202, 202, 202);
-    border-left-color:rgb(202, 202, 202);
-    border-right-color:rgb(202, 202, 202);
-    border-bottom-color: white;
-}
-
-.head-downlist:hover .head-submenu{
-    /* visibility: visible; */
-    background-color: white;
-}
-
-.head-text {
     margin:0px;
-    padding:5px 16px;
-    font-size: x-small;
-    color:gray;
 }
 
-.head-text:hover{
-    color:red;
-    cursor: pointer;
-    /* border-width:1px; */
-    /* border-style: solid; */
-    /* border-color:#e3e4e5; */
-    background-color: white;
-}
-
-.head-text-login {
-    margin:6px 0px;
-    font-size: x-small;
-    color:gray;
-    text-align:center;
-}
-
-.head-text-login:hover {
-    color:red;
-    cursor: pointer;
-}
-
-.spacer {
-    width:2px;
+.head-ul-li {
     margin:0px;
     padding:0px;
-    background-color: #ccc;
-    overflow: hidden;
-    cursor:pointer;
+    display: inline-block;
 }
 
-.head-submenu {
-    margin:6px 0px;
-    width:160px;
-    border-style:solid;
+.head-ul-li div{
+    margin:0px;
+    padding:0px 10px;
+    line-height:31px;
+}
+
+.head-ul-li div:hover .menu{
+    visibility: visible;
+}
+
+.head-ul-li div div{    
     border-width: 1px;
-    border-color:rgb(202, 202, 202);
-    background-color: white;
-    z-index: 1;
+    border-style: solid;
+    border-color:#106ac5;
+    line-height:29px;
+}
+
+.head-link {
+    color:gray;
+    text-decoration:none;
+}
+
+.head-link:hover {
+    color:red;
+    text-decoration:none;
+}
+
+.menu {
     position: absolute;
     visibility: hidden;
-}
-
-.head-subtext{
-    float:left;
-    padding:8px 16px;
-    font-size: x-small;
-    color:gray;
-}
-
-.head-subtext a{
-    color:gray;
-    text-decoration: none;
-}
-.head-subtext a:hover{
-    color:red;
 }
