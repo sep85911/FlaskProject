@@ -1,26 +1,80 @@
 import sys;
 
-print(sys.version);
-
-sStr1 = 'fdsfsaffdsfs';
-
-sStr2 = "string no2";
 
 
-print(sStr1 + sStr2); #python 字符串连接用的是+
+# while True:
+#     try:
+#         print(next(it));
+#     except StopIteration:
+#         sys.exit();
+
+def twoSum(nums, target):
+    """
+    :type nums: List[int]
+    :type target: int
+    :rtype: List[int]
+    """
+
+    for i, v in enumerate(nums):
+        for j, k in enumerate(nums[i+1:]):
+            if v + k == target:
+                return list([i, i + j + 1]);
 
 
-iList1 = [1,2,3,4]  #list 用的是方括号[]
-iList2 = [5,6,7];
+def twoSum_Answer(nums, target):
+    dic = {}   #字典     
+    for i, num in enumerate(nums):
 
-print(iList1 + iList2);
-iList1[-1] = 54
-print(iList1[3]);
+        print(dic);
+        if num in dic:                
+            return [dic[num], i]            
+        else:
+            dic[target - num] = i
 
-tTuple = (1,2,3,4,5)    #tuple 用的是圆括号()
 
-print(tTuple[0]);
+a = 2;
+if a == 1:
+    print("fuck you");
+elif a == 2:
+    print("fuck you too");
 
-tDict = {"a":11,"b":22,"fuck":1314}
+for i in range(54):#循环n次就写N 下标为0 最终不含N
+    pass;
 
-print(tDict["fuck"])
+for i in [11,22,33]:#直接遍历list所有值
+    print(i)
+
+for i in enumerate([11,22,33]):#用enmuerate遍历 i是一个tuple 包含key和value 或者 赋成2个值 key和value
+    print(i)
+
+import time;
+import math
+
+def addTwoNumbers(l1, l2):
+    """
+    :type l1: ListNode
+    :type l2: ListNode
+    :rtype: ListNode
+    """ 
+    res = [];
+    if len(l1) >= len(l2):            
+        for i in l1:
+            temp = l2[i] + (l1[i] or 0)
+            if temp >= 10:
+                res[i] = temp + 1;
+            else:
+                res[i] = l1[i] + l2[i];               
+    else:          
+        for i in l2:
+            temp = l1[i] + (l2[i] or 0)
+            if temp >= 10:
+                res[i] = temp + 1;
+            else:
+                res[i] = l1[i] + l2[i];    
+                
+    return res;
+
+# addTwoNumbers([2,4,3],[5,6,4]);
+
+
+
