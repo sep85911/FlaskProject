@@ -1,22 +1,22 @@
-import sys
-import os
+import sys;
+import os;
+import re;
 
-def fibonacci(n): # 生成器函数 - 斐波那契
-    a, b, counter = 0, 1, 0
-    while True:
-        if (counter > n): 
-            return
-        yield a
-        a, b = b, a + b
-        counter += 1
-f = fibonacci(10) # f 是一个迭代器，由生成器返回生成啊
+# 脚本所在文件夹
+Script_folder = "E:\\xydII\\WorldServer\\Script";
 
-while True:
-    try:
-        print(next(f), end=" ")
-    except StopIteration:
-        try:
-            os._exit();
-        except:
-            print("fuck you!")
-            break;
+def CheckTaskID(address):
+    for filename in os.listdir(Script_folder):
+        print(filename);
+
+
+if __name__ == "__main__":
+    # CheckTaskID(Script_folder);
+
+    testStr = '"12345"';
+
+
+    myre = re.compile("\d+",flags=0);
+
+    myre.search(testStr);
+    print(testStr);
