@@ -39,12 +39,13 @@ def DelMore(nums):
                     break;
     return len(nums);
 
-def showmessage(a,b,c):
-    print("测试中：") 
-
     
 
 
+
+
+def showmessage(a,b,c):
+    # searchPackage()
 
     
 if __name__ == "__main__":
