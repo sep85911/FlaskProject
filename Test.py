@@ -6,6 +6,7 @@ import string;
 import datetime;
 import calendar;
 import time;
+import json;
 
 import tkinter;
 from tkinter import Listbox;
@@ -45,7 +46,14 @@ def DelMore(nums):
 
 
 def showmessage(a,b,c):
-    # searchPackage()
+    with open("static/json/jsontest.json","r") as f:
+        text = f.read();
+        myJson = json.loads(text);  # 用json.loads函数将json内容转化为dict
+        print(myJson)
+        
+        c = myJson["passes"][0]["shader"]
+        # print(c);
+
 
     
 if __name__ == "__main__":
