@@ -73,7 +73,7 @@ from Model import *;
 #     print('my_before_request');
 
 import Config;
-App = Flask(__name__);
+App = Flask(__name__,template_folder="../templates"); #如果找不到html文件 这里可以指定模板的路径
 
 @App.route("/")
 def HomePage():
@@ -86,7 +86,23 @@ def HomePage():
         "age":33,
     }
 
-    return render_template("Main.html",**context)
+    books = [
+
+        {
+            "name":"三国演义",
+            "price":333,
+        },
+        {
+            "name":"水浒传",
+            "price":108
+        }
+    ]
+
+    fuck = 123;
+
+    avatar = "../static/img/IronMan.jpg"
+
+    return render_template("Main.html",a=fuck, books=books,avatar = avatar, **context);   # 一个参数可以用命名参数传递 参数多了用dict
 
 @App.route("/about/")
 def About():
