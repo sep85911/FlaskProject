@@ -54,25 +54,27 @@ def showmessage(a,b,c):
         c = myJson["passes"][0]["shader"]
         # print(c);
 
-
+import bs4;
     
 if __name__ == "__main__":
     
-    top = tkinter.Tk();    
+    # top = tkinter.Tk();    
 
-    screenW = top.winfo_screenwidth();
-    screenH = top.winfo_screenheight();
-    selfW = 100;
-    selfH = 60
-    size = "%dx%d+%d+%d" %( selfW,selfH,(screenW - selfW) / 2, (screenH - selfH) / 2 );
-    top.geometry(size);
+    # screenW = top.winfo_screenwidth();
+    # screenH = top.winfo_screenheight();
+    # selfW = 100;
+    # selfH = 60
+    # size = "%dx%d+%d+%d" %( selfW,selfH,(screenW - selfW) / 2, (screenH - selfH) / 2 );
+    # top.geometry(size);
 
-    b = tkinter.Button(top, text="测试",command=lambda : showmessage(a=1, b=2, c=3))    
-    b.pack(expand="yes");
+    # b = tkinter.Button(top, text="测试",command=lambda : showmessage(a=1, b=2, c=3))    
+    # b.pack(expand="yes");
 
 
-    print("按下测试键开始...")
-    top.mainloop();
+    # print("按下测试键开始...")
+    # top.mainloop();
+
+    print(bs4.__version__)
 
 
    

@@ -73,7 +73,11 @@ from Model import *;
 #     print('my_before_request');
 
 import Config;
+
+
 App = Flask(__name__,template_folder="../templates"); #如果找不到html文件 这里可以指定模板的路径
+
+
 
 @App.route("/")
 def HomePage():
@@ -102,6 +106,10 @@ def HomePage():
 
     avatar = "../static/img/IronMan.jpg"
 
+    # article1 = Article(title = '321', content = 'fuck you!');  #一个对象就是一条数据
+    # db.session.add(article1);  #加入进数据库
+    # db.session.commit(); #提交
+
     return render_template("Main.html",a=fuck, books=books,avatar = avatar, **context);   # 一个参数可以用命名参数传递 参数多了用dict
 
 @App.route("/about/")
@@ -115,6 +123,24 @@ def info():
 if __name__ == "__main__":
     # appIns.run();
     App.config.from_object(Config);
+
+    db = SQLAlchemy(App);
+
+    class User(db.Model):
+        __tablename__ = 'user';
+        id = db.Column(db.Integer, primary_key=True, autoincrement=True);
+        username = db.Column(db.String(100),nullable = False);
+        age = db.Column(db.Integer, autoincrement=True);
+
+    class Article(db.Model):
+        __tablename__ = 'article';
+        id = db.Column(db.Integer,primary_key = True,autoincrement = True);
+        title = db.Column(db.String(100),nullable = False );
+        content = db.Column(db.Text, nullable = False );
+        author_id = db.Column(db.Integer,db.ForeignKey('user.id'));
+        author = db.relationship('User', backref=db.backref('articles'))
+
+    db.create_all();
     App.run();
 
 
