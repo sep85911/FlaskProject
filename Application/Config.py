@@ -1,9 +1,9 @@
 #dialect+driver://username:password@host:port/database
 
 DIALECT='mysql';
-DRIVER='pymysql';
+DRIVER='mysqlconnector';
 USERNAME='root';
-PASSWORD='root';
+PASSWORD='m(24Virgo';
 HOST='127.0.0.1';
 PORT='3306';
 DATABASE='flask_db';

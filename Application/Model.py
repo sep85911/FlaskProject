@@ -1,4 +1,4 @@
-from flaskApp import db;
+from Application import flaskApp, flaskApp.db;
 
 class User(db.Model):
     __tablename__ = 'user';

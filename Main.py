@@ -1,14 +1,12 @@
-from flaskApp import *;
-from flask import session,request,url_for,redirect,render_template;
-from datetime import timedelta;
-from Model import *;
+from Application import flaskApp;
+# import Application;
 
-# appIns = create_app();
+appIns = flaskApp.create_app();
 
 # session.permanent = True;
 # appIns.permanent_session_lifetime = timedelta(minutes=5);
-# with appIns.app_context():
-#     db.create_all();
+with appIns.app_context():
+    flaskApp.db.create_all();
 
 
 # @appIns.route('/',methods =['GET','POST'])
@@ -68,54 +66,20 @@ from Model import *;
 #     return render_template('Test.html');
 
 
-# @appIns.before_request
-# def my_before_request():
-#     print('my_before_request');
-
-import Config;
-App = Flask(__name__,template_folder="../templates"); #如果找不到html文件 这里可以指定模板的路径
-
-@App.route("/")
+@appIns.route("/")
 def HomePage():
-    url = url_for("About") #url反转，通过视图函数名查找对应的url（相对路径）
+    return render_template("Main.html");   # 一个参数可以用命名参数传递 参数多了用dict
 
-    # return redirect(url);   # 重定向 上面获取了About视图函数的url地址 这里直接使用这个地址 就转到对应的页面了
-
-    context = {
-        "name":"tangyao",
-        "age":33,
-    }
-
-    books = [
-
-        {
-            "name":"三国演义",
-            "price":333,
-        },
-        {
-            "name":"水浒传",
-            "price":108
-        }
-    ]
-
-    fuck = 123;
-
-    avatar = "../static/img/IronMan.jpg"
-
-    return render_template("Main.html",a=fuck, books=books,avatar = avatar, **context);   # 一个参数可以用命名参数传递 参数多了用dict
-
-@App.route("/about/")
+@appIns.route("/about/")
 def About():
     return "关于页";
 
-@App.route("/about/info/")
+@appIns.route("/about/info/")
 def info():
     return "信息";
 
 if __name__ == "__main__":
-    # appIns.run();
-    App.config.from_object(Config);
-    App.run();
+    appIns.run();
 
 
 
