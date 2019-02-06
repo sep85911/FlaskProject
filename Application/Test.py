@@ -72,6 +72,8 @@ def showOneMsg():
 #     b = tkinter.Button(top, text="测试",command=lambda : showmessage(a=1, b=2, c=3))    
 #     b.pack(expand="yes");
 
+    # print("按下测试键开始...")
+    # top.mainloop();
 
 #     print("按下测试键开始...")
 #     top.mainloop();
