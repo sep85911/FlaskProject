@@ -15,3 +15,6 @@ def searchPackage():
     print('时间↓                             地点和跟踪进度↓\n')
     for item in json.loads(requests.get(url2).text)['data']:
         print(item['time'],item['context'])
+
+
+abc = "123"

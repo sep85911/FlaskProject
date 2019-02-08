@@ -1,14 +1,20 @@
 from flask import render_template;
 
-@appIns.route("/")
+from flask import Blueprint;
+
+bp = Blueprint("Main",__name__);
+
+
+@bp.route("/")
 def HomePage():
+    print("HomePage")
     return render_template("Main.html");   # 一个参数可以用命名参数传递 参数多了用dict
 
-@appIns.route("/about/")
+@bp.route("/about/")
 def About():
     return "关于页";
 
-@appIns.route("/about/info/")
+@bp.route("/about/info/")
 def info():
     return "信息";
 
