@@ -9,13 +9,19 @@
     <!-- http-equiv类似于HTTP的头部协议，它回应给浏览器一些有用的信息，以帮助正确和精确地显示网页内容。与之对应的属性值为content，content中的内容其实就是各个参数的变量值。 -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- <title>Micah's HomePage 首页</title> -->
+    <title>Micah's HomePage 首页</title>
 
     <!-- 标题logo -->
     <link rel="icon" href="../static/img/IronMan-radius.png" type="image/x-icon"/>
+    
 </head>
 <body>
-    <button id="Test">测试</button>
+    <button id="Test1">测试1</button>
+    <button id="Test2">测试2</button>
+
+    <p id="now"></p>
+
+    <a href="{{url_for('Main.About')}}">跳转到我的博客</a>
 
     <!-- 一般情况下把js文件放在最后，有利有弊 -->    
     <script src="http://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>

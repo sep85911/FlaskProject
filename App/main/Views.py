@@ -7,12 +7,11 @@ bp = Blueprint("Main",__name__);
 
 @bp.route("/")
 def HomePage():
-    print("HomePage")
     return render_template("Main.html");   # 一个参数可以用命名参数传递 参数多了用dict
 
-@bp.route("/about/")
+@bp.route("/myblog/")
 def About():
-    return "关于页";
+    return render_template("MyBlog_Main.html")
 
 @bp.route("/about/info/")
 def info():
