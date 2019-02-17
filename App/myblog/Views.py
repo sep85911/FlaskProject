@@ -79,3 +79,8 @@ def showOneMsg():
 #     top.mainloop();
 
 
+abc = 123;
+
+def Test002():
+    print(__name__);
+

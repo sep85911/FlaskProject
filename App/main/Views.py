@@ -1,9 +1,9 @@
-from flask import render_template;
+from flask import render_template,Blueprint;
 
-from flask import Blueprint;
+from .Extensions import db;
+from app import Models;
 
-bp = Blueprint("Main",__name__);
-
+bp = Blueprint("main",__name__);
 
 @bp.route("/")
 def HomePage():
@@ -11,10 +11,14 @@ def HomePage():
 
 @bp.route("/myblog/")
 def About():
+    newUser = Models.User(username="fucker",age = 123);
+    db.session.add(newUser);
+    db.session.commit();
     return render_template("MyBlog_Main.html")
 
 @bp.route("/about/info/")
 def info():
+
     return "信息";
 
 # @appIns.route('/',methods =['GET','POST'])
