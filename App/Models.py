@@ -1,4 +1,4 @@
-from app.main.Extensions import db;
+from App.main.Extensions import db;
 
 class User(db.Model):
     __tablename__ = 'user';

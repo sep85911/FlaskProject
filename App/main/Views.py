@@ -1,7 +1,7 @@
 from flask import render_template,Blueprint;
 
 from .Extensions import db;
-from app import Models;
+from App import Models;
 
 bp = Blueprint("main",__name__);
 

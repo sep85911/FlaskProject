@@ -1,6 +1,6 @@
 from flask import Flask;
 
-from app.main import Views as MainViews; # 导入app/main下面的视图函数py文件
+from App.main import Views as MainViews; # 导入app/main下面的视图函数py文件
 from .Extensions import db;
 import Config;
 

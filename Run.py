@@ -1,4 +1,4 @@
-from app.main import FlaskApp;
+from App.main import FlaskApp;
 
 if __name__ == "__main__":
     app = FlaskApp.CreateApp();
