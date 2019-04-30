@@ -85,5 +85,16 @@
     </form>
 
 
+    <!-- 框架 用iframe标签规定一个内联框架 注意target属性 将框架和超链接关联在一起 frameborder属性定义了框架的边框宽度 宽和高不解释了-->
+    <iframe src="" frameborder="0" name="myFrame" width="640" height="480"></iframe>
+    <a href="https://www.sogo.com" target="myFrame">框架里&nbsp去sogo</a>
+
+    <!-- 插入脚本片段 -->
+    <script>
+        // 字符实体 其中&nbsp代表空格 如果是一个空格就敲空格键都行 但多个空格必须用对应数量的&nbsp代替
+        document.write("Hel lo Wor&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspld")
+    </script>
+
+
 </body>
 </html>
