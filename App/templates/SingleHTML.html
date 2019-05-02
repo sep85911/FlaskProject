@@ -11,8 +11,13 @@
 
     <!-- 小图标 这里用的是新浪的 -->
     <link rel="shortcut icon" type="image/x-icon" href="../static/img/Webpack32.png">
+
+    <!-- 在收藏夹中显示你的图标 -->
+    <!-- <link rel="Bookmark" href="../static/img/Webpack32.png"> -->
 </head>
-<body>
+
+<!-- onselectstart:禁止选择 onpaste：禁止粘贴 oncut：禁止剪切 oncopy：禁止复制 -->
+<body onselectstart="return false" onpaste="return false" oncut="return false" oncopy="return false">
 
     <!-- 各种标题 -->
     <h1>标题1</h1>
@@ -48,12 +53,12 @@
     </table>
 
     <!-- 列表 分为有序和无序两种 -->
-    <ol>
+    <ol id="myol">
         <li>有序列表1</li>
         <li>有序列表2</li>
     </ol>
 
-    <ul>
+    <ul id="myul">
         <li>无序列表1</li>
         <li>无序列表2</li>
     </ul>
