@@ -16,7 +16,15 @@ a:visited {color:rgb(125, 230, 125);}  /* 访问过的链接 */
 a:hover {color:rgb(243, 177, 177);}  /* 鼠标指上去的链接 */ 
 a:active {color:#0000FF;}  /* 已激活的链接 */
 
-h1{
+hr{
+    clear:left; /*取消浮动 */
+}
+div>p 
+{
+    color:yellow;
+}
+
+h1,h2,h3,h4,h5,h6 {
     float:left;
 }
 

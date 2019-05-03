@@ -20,89 +20,104 @@
 <body onselectstart="return false" onpaste="return false" oncut="return false" oncopy="return false">
 
     <!-- 各种标题 -->
-    <h1>标题1</h1>
-    <h2>标题2</h2>
-    <h3>标题3</h3>
-    <h4>标题4</h4>
-    <h5>标题5</h5>
-    <h6>标题6</h6>
+    <div>
+        <h1>标题1</h1>
+        <h2>标题2</h2>
+        <h3>标题3</h3>
+        <h4>标题4</h4>
+        <h5>标题5</h5>
+        <h6>标题6</h6>       
+    </div>
     
     <!-- 水平线 -->
-    <hr>
 
-    <!-- 段落 -->
-    <p>段落</p>
+    <div>
+        <hr>
 
-    <!-- 链接 -->
-    <a href="https://www.google.com">前往Google</a>
+        <!-- 段落 -->
+        <p>段落</p>
 
-    <!-- 图片 -->
-    <img src="../static/img/Webpack200.png" alt="no pic">
+        <!-- 链接 -->
+        <a href="https://www.google.com">前往Google</a>
 
-    <!-- 表格 -->
-    <table>
-        <th>表格标题</th>
-        <tr>
-            <td>1</td>            
-            <td>2</td>            
-        </tr>
-        <tr>
-            <td>3</td>            
-            <td>4</td>            
-        </tr>
-    </table>
+        <!-- 图片 -->
+        <img src="../static/img/Webpack200.png" alt="no pic">
 
-    <!-- 列表 分为有序和无序两种 -->
-    <ol id="myol">
-        <li>有序列表1</li>
-        <li>有序列表2</li>
-    </ol>
+        <!-- 表格 -->
+        <table>
+            <th>表格标题</th>
+            <tr>
+                <td>1</td>            
+                <td>2</td>            
+            </tr>
+            <tr>
+                <td>3</td>            
+                <td>4</td>            
+            </tr>
+        </table>
 
-    <ul id="myul">
-        <li>无序列表1</li>
-        <li>无序列表2</li>
-    </ul>
+        <!-- 列表 分为有序和无序两种 -->
+        <ol id="myol">
+            <li>有序列表1</li>
+            <li>有序列表2</li>
+        </ol>
 
-    <!-- 区块 分为块级元素和内联元素两种 -->
-    <!-- <div><a href="https://www.google.com">前往GoogleA</a></div> -->
-    <!-- <a><a href="https://www.google.com">前往GoogleB</a></a> -->
+        <ul id="myul">
+            <li>无序列表1</li>
+            <li>无序列表2</li>
+        </ul>
 
-    <!-- 表单 用来收集用户输入 所以下面有很多都是input标签 -->
-    <form action="" method="GET">
-        <span>firstname:</span><input type="text" name="firstname" id="">
-        <br>
-        <span>password:</span><input type="password" name="password" id="">
-        <br>
+        <!-- 区块 分为块级元素和内联元素两种 -->
+        <!-- <div><a href="https://www.google.com">前往GoogleA</a></div> -->
+        <!-- <a><a href="https://www.google.com">前往GoogleB</a></a> -->
 
-        <!-- 单选框 靠name属性进行分组 -->
-        <input type="radio" name="sex" value="male" id="">male<br>
-        <input type="radio" name="sex" value="female" id="">female<br>
-        <br>        
-        <input type="radio" name="age" value="80s" id="">80s<br>
-        <input type="radio" name="age" value="90s" id="">90s<br>  
-        
-        <br>  
-        <input type="checkbox" name="robbit" id="">game<br> 
-        <input type="checkbox" name="robbit" id="">animation<br> 
-        <input type="checkbox" name="robbit" id="">cartoon<br> 
+        <!-- 表单 用来收集用户输入 所以下面有很多都是input标签 -->
+        <form action="" method="GET">
+            <span>firstname:</span><input type="text" name="firstname" id="">
+            <br>
+            <span>password:</span><input type="password" name="password" id="">
+            <br>
 
-        <input type="submit" value="Submit">
-    </form>
+            <!-- 单选框 靠name属性进行分组 -->
+            <input type="radio" name="sex" value="male" id="">male<br>
+            <input type="radio" name="sex" value="female" id="">female<br>
+            <br>        
+            <input type="radio" name="age" value="80s" id="">80s<br>
+            <input type="radio" name="age" value="90s" id="">90s<br>  
+            
+            <br>  
+            <input type="checkbox" name="robbit" id="">game<br> 
+            <input type="checkbox" name="robbit" id="">animation<br> 
+            <input type="checkbox" name="robbit" id="">cartoon<br> 
+
+            <input type="submit" value="Submit">
+        </form>
 
 
-    <!-- 框架 用iframe标签规定一个内联框架 注意target属性 将框架和超链接关联在一起 frameborder属性定义了框架的边框宽度 宽和高不解释了-->
-    <iframe src="" frameborder="0" name="myFrame" width="640" height="480"></iframe>
-    <a href="https://www.sogo.com" target="myFrame">框架里&nbsp去sogo</a>
+        <!-- 框架 用iframe标签规定一个内联框架 注意target属性 将框架和超链接关联在一起 frameborder属性定义了框架的边框宽度 宽和高不解释了-->
+        <iframe src="" frameborder="0" name="myFrame" width="64" height="48"></iframe>
+        <a href="https://www.sogo.com" target="myFrame">框架里&nbsp去sogo</a>
 
-    <!-- 插入脚本片段 -->
-    <script>
-        // 字符实体 其中&nbsp代表空格 如果是一个空格就敲空格键都行 但多个空格必须用对应数量的&nbsp代替
-        document.write("Hel lo Wor&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspld")
-    </script>
+        <!-- 插入脚本片段 -->
+        <script>
+            // 字符实体 其中&nbsp代表空格 如果是一个空格就敲空格键都行 但多个空格必须用对应数量的&nbsp代替
+            document.write("Hel lo Wor&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspld")
+        </script>
 
-    <!-- <strong>重要文本</strong> -->
-    <!-- A<sub>下标</sub> -->
-    <!-- B<sup>上标</sup> -->
+        <!-- <strong>重要文本</strong> -->
+        <!-- A<sub>下标</sub> -->
+        <!-- B<sup>上标</sup> -->
+
+        <div id="myTitle">
+            <span>
+                <p>你好啊1</p>
+            </span>
+            <span>
+                <p>你好啊2</p>
+            </span>
+        </div>        
+    </div>
+ 
 
 </body>
 </html>
