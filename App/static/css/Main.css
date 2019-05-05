@@ -28,13 +28,21 @@ h1,h2,h3,h4,h5,h6 {
     float:left;
 }
 
+
 #myul {
     list-style-type:none;
-    color: aqua;
-    border:2px;
-    border-style:solid;
-    border-color:rgb(231, 82, 82);
-    padding: 5px;
-    margin:0px 100px 0px 100px;
-    /* width:250px;     */
+    outline-style: solid;
+    outline-color: aquamarine;
+    outline-width: 50px;
+    /* color: aqua; */
+    /* border:20px; */
+    border-style:dashed;
+    border-width: 40px;
+    border-color:rgb(197, 99, 99);
+    padding: 100px;
+    /* width:800px; */
+    margin:50px;
+    
+    
+       
 }
