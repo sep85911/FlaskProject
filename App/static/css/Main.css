@@ -29,8 +29,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 
+/* 无序列表 */
 #myul {
-    list-style-type:none;
+    list-style-type:none;   
     outline-style: solid;
     outline-color: aquamarine;
     outline-width: 50px;

@@ -40,6 +40,9 @@ def DelMore(nums):
                     break;
     return len(nums);
 
+
+    
+
     
 
 
@@ -57,6 +60,8 @@ def showmessage(a,b,c):
 
 def showOneMsg():
     print("Testing!")
+
+
     
 # if __name__ == "__main__":
     
@@ -81,6 +86,46 @@ def showOneMsg():
 
 abc = 312313;
 
+p = (11,22,33,44)
+
+# aa,bb,cc = p;
+
+# print(cc)   # 解压赋值 前后数量应该一致 不一致就报错 可以用_（下划线）作为占位符 忽略不需要的值
+
 def Test002():
     print(__name__);
+
+import math;
+
+def avg(myList):
+    l = len(myList);
+    all = 0;
+    for i in myList:
+        all = all + i;
+    return all / l;
+
+def drop_first_last(grade):
+    fisrt,*middle, last = grade;    # *(星号表达式)表示这是一个列表类型 如果没有也会是一个空列表 并且可以和_（下划线）配合使用
+    return avg(middle);
+
+# print(drop_first_last(p));
+
+from collections import deque
+
+
+def search(lines, pattern, history=3):
+    previous_lines = deque(maxlen=history)  #双向队列 append从右边加 appendleft从左边加 maxlen限定了最大容量 超过的话 另一边的第一个将被挤出去
+    for line in lines:
+        if pattern in line:
+            previous_lines.append(line)
+            yield line, previous_lines
+
+# Example use on a file
+if __name__ == '__main__':
+    with open(r'../../../Test20190601.txt') as f:
+        for line, prevlines in search(f, 'python', 4):
+            for pline in prevlines:
+                print(pline, end='')
+            print('-' * 20) #这是分割线
+
 
