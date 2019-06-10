@@ -40,14 +40,6 @@ def DelMore(nums):
                     break;
     return len(nums);
 
-
-    
-
-    
-
-
-
-
 def showmessage(a,b,c):
     with open("static/json/jsontest.json","r") as f:
         text = f.read();
@@ -57,11 +49,8 @@ def showmessage(a,b,c):
         c = myJson["passes"][0]["shader"]
         # print(c);
 
-
 def showOneMsg():
     print("Testing!")
-
-
     
 # if __name__ == "__main__":
     
@@ -116,9 +105,15 @@ from collections import deque
 def search(lines, pattern, history=3):
     previous_lines = deque(maxlen=history)  #双向队列 append从右边加 appendleft从左边加 maxlen限定了最大容量 超过的话 另一边的第一个将被挤出去
     for line in lines:
-        if pattern in line:
+        if pattern in line:#在每一行中查找
             previous_lines.append(line)
-            yield line, previous_lines
+            yield line, previous_lines #返回出去
+
+def TestItertor(a):
+    while a <= 10:
+        yield a;    #迭代 用于泛型for
+        a = a + 1;
+
 
 # Example use on a file
 if __name__ == '__main__':
@@ -129,3 +124,64 @@ if __name__ == '__main__':
             print('-' * 20) #这是分割线
 
 
+import heapq;
+
+list001 = [4123,54,132,65,-423,534,999,4,13,];
+
+print(heapq.nlargest(2,list001));#一个列表中最大的N项
+print(heapq.nsmallest(3,list001));#一个列表中最小的N项
+
+list002 = [
+    {"name":"tangyao","age":18,"sex":False},
+    {"name":"chenjing","age":23,"sex":True},
+    {"name":"haha","age":2413,"sex":True},
+    {"name":"tangxiaodong","age":12,"sex":False},
+]
+
+print(heapq.nlargest(2,list002,lambda a:a['age']))
+
+
+print("{0}{1}{2}".format(1,5342,3)); #字符串格式化 里面用{}代替 可以加数字 也可以不加 不加就按顺序填充 其中！后面可以加s r a 分别对应str() repr() ascii()
+
+class cItem:
+    def __init__(self,name):
+        self.name = name;
+
+    def __repr__(self):#重写这个函数后 可以打印值 
+        return "class cItem({!r})".format(self.name);   
+
+    def __lt__(self,other): #重写这个函数后 类可以支持大于小于判断
+        return self.name < other.name;
+        
+class  PriorityQueue:
+    def __init__(self):
+        self._queue = [];
+        self._index = 0;
+
+    def push(self,item,priority):
+        heapq.heappush(self._queue,item);
+        self._index += 1;
+
+    def pop(self):
+        return heapq.heappop(self._queue);
+
+
+q = PriorityQueue();
+
+q.push(cItem("A"),2);
+q.push(cItem("B"),5);
+q.push(cItem("C"),3);
+q.push(cItem("D"),44);
+q.push(cItem("E"),13);
+
+print(q.pop());
+
+
+testlist = [];
+heapq.heappush(testlist,-1);
+heapq.heappush(testlist,-2);
+heapq.heappush(testlist,-3);
+heapq.heappush(testlist,-24);
+heapq.heappush(testlist,-6);
+
+print(heapq.heappop(testlist));
