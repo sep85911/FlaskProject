@@ -34,15 +34,15 @@ h1,h2,h3,h4,h5,h6 {
     list-style-type:none;   
     outline-style: solid;
     outline-color: aquamarine;
-    outline-width: 50px;
+    outline-width: 5px;
     /* color: aqua; */
     /* border:20px; */
-    border-style:dashed;
-    border-width: 40px;
+    border-style:solid;
+    border-width: 5px;
     border-color:rgb(197, 99, 99);
-    padding: 100px;
+    padding: 5px 5px;
     /* width:800px; */
-    margin:50px;
+    margin:5px;
     
     
        
