@@ -12,6 +12,8 @@ import tkinter;
 from tkinter import Listbox;
 from tkinter import messagebox;
 
+from collections import defaultdict;
+
 
 # 脚本所在文件夹
 Script_folder = "E:\\xydII\\WorldServer\\Script";
@@ -184,4 +186,15 @@ heapq.heappush(testlist,-3);
 heapq.heappush(testlist,-24);
 heapq.heappush(testlist,-6);
 
-print(heapq.heappop(testlist));
+
+
+# d = defaultdict(list);
+# d["a"].append(1)
+# d["a"].append(2)
+# d["a"].append(3)
+# d["a"].append(4)
+
+d = {
+    "a":[1,2,3],
+    "b":[11,22,33],
+}
