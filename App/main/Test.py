@@ -188,13 +188,24 @@ heapq.heappush(testlist,-6);
 
 
 
-# d = defaultdict(list);
-# d["a"].append(1)
-# d["a"].append(2)
-# d["a"].append(3)
-# d["a"].append(4)
+d = defaultdict(list);
+d["a"].append(1)
+d["a"].append(2)
+d["b"].append(3)
+d["b"].append(4)
 
-d = {
-    "a":[1,2,3],
-    "b":[11,22,33],
-}
+sd = defaultdict(set);
+sd['a'].add(3)
+sd['b'].add(4)
+sd['a'].add(5)
+
+from collections import OrderedDict;
+
+oList = OrderedDict();
+oList["fuck"] = 1;
+oList["joker"] = 3;
+oList["weaker"] = 2;
+oList["sucker"] = 4;
+
+for i in oList:
+    print(i,oList[i]);
