@@ -51,3 +51,35 @@ h1,h2,h3,h4,h5,h6 {
     
        
 }
+
+#myol 
+{
+    /* width:200px; */
+    /* border-style:solid;
+    border-width: 5px;
+    border-color:rgb(214, 176, 176); */
+    
+}
+
+#myol li
+{
+    border-style: solid;
+    border-width:1px;
+    border-color:white;
+    width:100px;
+    background-color: #0000FF;
+    list-style-type: none;
+    float:left;
+    text-align: center;
+}
+
+ol li.end
+{
+    border-style: none;
+    clear:both;
+    /* color:lawngreen; */
+}
+
+.level2 .level3{
+    color:blue;
+}
