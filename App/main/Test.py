@@ -209,3 +209,11 @@ oList["sucker"] = 4;
 
 for i in oList:
     print(i,oList[i]);
+
+# 摄氏度转化为华氏度的公式如下
+# F = 1.8C + 32
+c = float(input("输入摄氏度:"));
+f = 1.8 * c + 32;
+print("华氏度为：%.2f" % f);
+
+print(math.pi);
