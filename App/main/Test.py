@@ -118,20 +118,20 @@ def TestItertor(a):
 
 
 # Example use on a file
-if __name__ == '__main__':
-    with open(r'../../../Test20190601.txt') as f:
-        for line, prevlines in search(f, 'python', 4):
-            for pline in prevlines:
-                print(pline, end='')
-            print('-' * 20) #这是分割线
+# if __name__ == '__main__':
+#     with open(r'../../../Test20190601.txt') as f:
+#         for line, prevlines in search(f, 'python', 4):
+#             for pline in prevlines:
+#                 print(pline, end='')
+#             print('-' * 20) #这是分割线
 
 
 import heapq;
 
 list001 = [4123,54,132,65,-423,534,999,4,13,];
 
-print(heapq.nlargest(2,list001));#一个列表中最大的N项
-print(heapq.nsmallest(3,list001));#一个列表中最小的N项
+# print(heapq.nlargest(2,list001));#一个列表中最大的N项
+# print(heapq.nsmallest(3,list001));#一个列表中最小的N项
 
 list002 = [
     {"name":"tangyao","age":18,"sex":False},
@@ -140,10 +140,10 @@ list002 = [
     {"name":"tangxiaodong","age":12,"sex":False},
 ]
 
-print(heapq.nlargest(2,list002,lambda a:a['age']))
+# print(heapq.nlargest(2,list002,lambda a:a['age']))
 
 
-print("{0}{1}{2}".format(1,5342,3)); #字符串格式化 里面用{}代替 可以加数字 也可以不加 不加就按顺序填充 其中！后面可以加s r a 分别对应str() repr() ascii()
+# print("{0}{1}{2}".format(1,5342,3)); #字符串格式化 里面用{}代替 可以加数字 也可以不加 不加就按顺序填充 其中！后面可以加s r a 分别对应str() repr() ascii()
 
 class cItem:
     def __init__(self,name):
@@ -176,7 +176,7 @@ q.push(cItem("C"),3);
 q.push(cItem("D"),44);
 q.push(cItem("E"),13);
 
-print(q.pop());
+# print(q.pop());
 
 
 testlist = [];
@@ -207,13 +207,22 @@ oList["joker"] = 3;
 oList["weaker"] = 2;
 oList["sucker"] = 4;
 
-for i in oList:
-    print(i,oList[i]);
+# for i in oList:
+#     print(i,oList[i]);
 
 # 摄氏度转化为华氏度的公式如下
 # F = 1.8C + 32
 c = float(input("输入摄氏度:"));
 f = 1.8 * c + 32;
-print("华氏度为：%.2f" % f);
+print("华氏度为：{}".format(f));
 
-print(math.pi);
+def isHui(nNum):
+    temp = nNum;
+    total = 0;
+    while temp > 0:
+        total = total * 10 + temp % 10; #取temp的最后一位和total拼接起来形成倒序数字
+        temp //= 10;
+    return total == nNum;   #判断是否和之前的数字一样
+
+
+print(isHui(1234567654321));
