@@ -8,10 +8,13 @@ import calendar;
 import time;
 import json;
 
+import math;
+import heapq;
 import tkinter;
+
 from tkinter import Listbox;
 from tkinter import messagebox;
-
+from collections import deque
 from collections import defaultdict;
 
 
@@ -86,7 +89,6 @@ p = (11,22,33,44)
 def Test002():
     print(__name__);
 
-import math;
 
 def avg(myList):
     l = len(myList);
@@ -99,11 +101,6 @@ def drop_first_last(grade):
     fisrt,*middle, last = grade;    # *(星号表达式)表示这是一个列表类型 如果没有也会是一个空列表 并且可以和_（下划线）配合使用
     return avg(middle);
 
-# print(drop_first_last(p));
-
-from collections import deque
-
-
 def search(lines, pattern, history=3):
     previous_lines = deque(maxlen=history)  #双向队列 append从右边加 appendleft从左边加 maxlen限定了最大容量 超过的话 另一边的第一个将被挤出去
     for line in lines:
@@ -115,35 +112,6 @@ def TestItertor(a):
     while a <= 10:
         yield a;    #迭代 用于泛型for
         a = a + 1;
-
-
-# Example use on a file
-# if __name__ == '__main__':
-#     with open(r'../../../Test20190601.txt') as f:
-#         for line, prevlines in search(f, 'python', 4):
-#             for pline in prevlines:
-#                 print(pline, end='')
-#             print('-' * 20) #这是分割线
-
-
-import heapq;
-
-list001 = [4123,54,132,65,-423,534,999,4,13,];
-
-# print(heapq.nlargest(2,list001));#一个列表中最大的N项
-# print(heapq.nsmallest(3,list001));#一个列表中最小的N项
-
-list002 = [
-    {"name":"tangyao","age":18,"sex":False},
-    {"name":"chenjing","age":23,"sex":True},
-    {"name":"haha","age":2413,"sex":True},
-    {"name":"tangxiaodong","age":12,"sex":False},
-]
-
-# print(heapq.nlargest(2,list002,lambda a:a['age']))
-
-
-# print("{0}{1}{2}".format(1,5342,3)); #字符串格式化 里面用{}代替 可以加数字 也可以不加 不加就按顺序填充 其中！后面可以加s r a 分别对应str() repr() ascii()
 
 class cItem:
     def __init__(self,name):
@@ -167,55 +135,13 @@ class  PriorityQueue:
     def pop(self):
         return heapq.heappop(self._queue);
 
+# 摄氏度转化为华氏度
+def TempExchange(nTemp):
+    # c = float(input("输入摄氏度:"));
+    f = 1.8 * nTemp + 32;
+    print("华氏度为：{}".format(f));
 
-q = PriorityQueue();
-
-q.push(cItem("A"),2);
-q.push(cItem("B"),5);
-q.push(cItem("C"),3);
-q.push(cItem("D"),44);
-q.push(cItem("E"),13);
-
-# print(q.pop());
-
-
-testlist = [];
-heapq.heappush(testlist,-1);
-heapq.heappush(testlist,-2);
-heapq.heappush(testlist,-3);
-heapq.heappush(testlist,-24);
-heapq.heappush(testlist,-6);
-
-
-
-d = defaultdict(list);
-d["a"].append(1)
-d["a"].append(2)
-d["b"].append(3)
-d["b"].append(4)
-
-sd = defaultdict(set);
-sd['a'].add(3)
-sd['b'].add(4)
-sd['a'].add(5)
-
-from collections import OrderedDict;
-
-oList = OrderedDict();
-oList["fuck"] = 1;
-oList["joker"] = 3;
-oList["weaker"] = 2;
-oList["sucker"] = 4;
-
-# for i in oList:
-#     print(i,oList[i]);
-
-# 摄氏度转化为华氏度的公式如下
-# F = 1.8C + 32
-c = float(input("输入摄氏度:"));
-f = 1.8 * c + 32;
-print("华氏度为：{}".format(f));
-
+# 判断是否为回文数
 def isHui(nNum):
     temp = nNum;
     total = 0;
@@ -224,5 +150,49 @@ def isHui(nNum):
         temp //= 10;
     return total == nNum;   #判断是否和之前的数字一样
 
+# RPG文字
+def horsewords(showmsg):
+    allWords = "这是一段测试文字，呵呵呵";
+    curWords = "";
+    for i in range(len(allWords)):
+        print(allWords[0:i])
+        time.sleep(0.5);
+        os.system("cls");
 
-print(isHui(1234567654321));
+def fib(num):
+    a,b = 0,1;
+    for i in range(num):
+        a,b = b, a + b; 
+        yield a;
+   
+def main():
+    # for i in fib(10):
+    #     print(i)
+
+    tTemp = (1,2,3,4,5,6,7,8,9)
+
+    for i in range(len(tTemp)):
+        print("找到一个偶数：{}".format( tTemp[i] ) if tTemp[i] % 2 == 0 else "奇数，滚蛋！")
+
+def TestTuple():
+    myTuple001 = (1,2,3,4,5)
+    print(myTuple001[3]);
+    # myTuple001[0] = 43;   # tuple不允许修改
+
+def TestSet():
+    mySet001 = {1,2,3,4,5}
+    mySet002 = {3,4,5,6,7,8}
+
+    mySet001.update([8,9,1]);
+
+    print(mySet001);
+
+
+if __name__ == "__main__":
+    # horsewords("这是一段走马灯文字");
+
+    main()
+
+    # TestTuple();
+
+    # TestSet();

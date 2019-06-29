@@ -17,14 +17,24 @@ function myOpen(){
 
 }
 
-var s = setTimeout(ShowMessage,5000);
-console.log(s + " " + typeof(s));
+// var s = setTimeout(ShowMessage,5000);
+// console.log(s + " " + typeof(s));
 // setInterval(ShowMessage,1000,3);
 
 function ShowMessage()
 {
     console.log("老子牛逼！");
+    window.alert("这是alert窗口!");
 }
+
+var array = [1,2,3,4,54,5,423,654,243,6,756,8]
+var btn001 = document.getElementById("btn001");
+btn001.onmouseup = function()
+{
+    window.alert(array.length);
+}
+
+
 
 
 
