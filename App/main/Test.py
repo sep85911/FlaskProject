@@ -188,11 +188,54 @@ def TestSet():
     print(mySet001);
 
 
+
+def print_board(board):
+    print(board["TL"]+"|"+board["TM"]+"|"+board["TR"]);
+    print("-+-+-");
+    print(board["ML"]+"|"+board["MM"]+"|"+board["MR"]);
+    print("-+-+-");
+    print(board["BL"]+"|"+board["BM"]+"|"+board["BR"]);
+
+def play_board():
+    init_board={
+        "TL":" ","TM":" ","TR":" ",
+        "ML":" ","MM":" ","MR":" ",
+        "BL":" ","BM":" ","BR":" "
+    }
+    begin = True;
+
+    while begin:
+        cur_board = init_board.copy();
+        turn = "x"
+        counter = 0;
+        begin = False;
+        os.system("cls");
+        print_board(cur_board);
+        while counter < 9:
+            move = input("该{}走了，请输入想要下的位置号:".format(turn));
+            if cur_board[move] == " ":
+                counter += 1;
+                cur_board[move] = turn;
+                if turn == "x":
+                    turn = "o";
+                else:
+                    turn = "x"
+            os.system("cls");
+            print_board(cur_board);
+        
+        choice = input("再玩一局？YES/NO");
+        begin = choice == "YES";
+
+
+
+
 if __name__ == "__main__":
     # horsewords("这是一段走马灯文字");
 
-    main()
+    # main()
 
     # TestTuple();
 
     # TestSet();
+
+    play_board();
