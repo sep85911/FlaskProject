@@ -226,8 +226,35 @@ def play_board():
         choice = input("再玩一局？YES/NO");
         begin = choice == "YES";
 
+class Test:
+    def __init__(self):
+        self._NAME = "name1";
+        self._ID = 123;
 
+    @property
+    def Name(self):
+        return self._NAME
 
+    @Name.setter
+    def Name(self,name):
+        self._NAME = name;
+
+    @property
+    def ID(self):
+        return self._ID;
+
+    @ID.setter
+    def ID(self,id):
+        self._ID = id;
+
+from abc import ABCMeta,abstractmethod; #python中抽象类需要导入abc模块中的ABCMeta 和 abstractmethod; 使用后该类将不能被实例化
+class myClass(object,metaclass=ABCMeta):
+    def __init__(self):
+        pass;
+
+    @abstractmethod
+    def run(self):
+        print("run")
 
 if __name__ == "__main__":
     # horsewords("这是一段走马灯文字");
@@ -238,4 +265,9 @@ if __name__ == "__main__":
 
     # TestSet();
 
-    play_board();
+    # play_board();]
+
+    # Test_Obj();
+
+    t = Test();
+    print(t.Name);
