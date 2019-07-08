@@ -83,3 +83,17 @@ ol li.end
 .level2 .level3{
     color:blue;
 }
+
+#myul li{
+    display:inline-block;
+    /* float:left; */
+    padding: 3px;
+    line-height: 2px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: blueviolet;
+}
+
+.nav-element{
+    display:inline-block;
+}
