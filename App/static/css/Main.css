@@ -1,8 +1,11 @@
 body {
-    background-color: rgb(69, 72, 109);
+    background-color: rgb(221, 222, 231);
     /* background-color: white; */
-    color:white;
+    color:rgb(53, 53, 53);
     margin:0px;
+    padding:0px;
+    width:100%;
+    height:100%;
 }
 
 a {
@@ -16,84 +19,20 @@ a:visited {color:rgb(125, 230, 125);}  /* 访问过的链接 */
 a:hover {color:rgb(243, 177, 177);}  /* 鼠标指上去的链接 */ 
 a:active {color:#0000FF;}  /* 已激活的链接 */
 
-hr{
-    clear:left; /*取消浮动 */
-}
-div>p 
-{
-    color:yellow;
-}
-
-h1,h2,h3,h4,h5,h6 {
-    float:left;
-}
-
-
-/* 无序列表 */
-#myul {
-    list-style-type:none;   
-    outline-style: solid;
-    outline-color: aquamarine;
-    outline-width: 5px;
-    /* color: aqua; */
-    /* border:20px; */
-    border-style:solid;
-    border-width: 5px;
-    border-color:rgb(197, 99, 99);
+#father{
+    width:200px;
+    height:120px;
+    background-color: rgb(57, 197, 21);
     text-align:center;
-    padding:0px;
-
-    width:400px;
-    margin:0 auto;
-    
-    height:100px;
-    line-height: 100px;
-    
-       
 }
 
-#myol 
-{
-    /* width:200px; */
-    /* border-style:solid;
-    border-width: 5px;
-    border-color:rgb(214, 176, 176); */
-    
-}
-
-#myol li
-{
-    border-style: solid;
-    border-width:1px;
-    border-color:white;
+#son{
     width:100px;
-    background-color: #0000FF;
-    list-style-type: none;
-    float:left;
-    text-align: center;
-}
-
-ol li.end
-{
-    border-style: none;
-    clear:both;
-    /* color:lawngreen; */
-}
-
-.level2 .level3{
-    color:blue;
-}
-
-#myul li{
-    display:inline-block;
-    /* float:left; */
-    padding: 3px;
-    line-height: 2px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: blueviolet;
-}
-
-.nav-element{
-    display:inline-block;
+    height:50px;
+    margin:0 auto;  /*水平居中*/
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+    
+    background-color: rgb(87, 47, 231)
 }
