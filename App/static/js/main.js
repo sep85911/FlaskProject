@@ -13,7 +13,7 @@ function myOpen(){
     // var b = window.prompt("接受输入窗口") //接受输入窗口
     // var c = window.confirm("确定")  //确定窗口
 
-    console.log(c);
+    console.log("c");
 
 }
 

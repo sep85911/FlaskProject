@@ -79,12 +79,16 @@
 
         <!-- 表单 用来收集用户输入 所以下面有很多都是input标签 -->
         <form action="" method="GET">
+
+            <!-- 提示文字+输入框 类型是文本 text  -->
             <span>firstname:</span><input type="text" name="firstname" id="">
             <br>
+
+            <!-- 提示文字+输入框 类型是密码框 password -->
             <span>password:</span><input type="password" name="password" id="">
             <br>
 
-            <!-- 单选框 靠name属性进行分组 -->
+            <!-- 单选框 radio 靠name属性进行分组 -->
             <input type="radio" name="sex" value="male" id="">male<br>
             <input type="radio" name="sex" value="female" id="">female<br>
             <br>        
@@ -92,10 +96,13 @@
             <input type="radio" name="age" value="90s" id="">90s<br>  
             
             <br>  
+
+            <!-- 复选框 checkbox 靠name属性进行分组 -->
             <input type="checkbox" name="robbit" id="">game<br> 
             <input type="checkbox" name="robbit" id="">animation<br> 
             <input type="checkbox" name="robbit" id="">cartoon<br> 
 
+            <!-- 提交按钮 -->
             <input type="submit" value="Submit">
         </form>
 
@@ -141,6 +148,6 @@
 
     <input type="button" value="open" onclick="myOpen()">
  
-    <!-- <script src="..//static/js/main.js"></script> -->
+    <script src="..//static/js/main.js"></script>
 </body>
 </html>
