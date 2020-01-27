@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 0px;  
+            padding: 0px;
+        }
+
+        .block001 {
+        
+            /* 外边距 */
+            margin:100px;
+
+            /* 轮廓 不占据空间 不算在盒子模型内 */
+            outline: rgb(64, 43, 185) solid 10px;
+
+            /* 边框 在内外边距之间 颜色默认为字体颜色 除非你手动设置 */
+            border: 5px solid rgb(134, 54, 54); 
+
+            /* 内边距 */
+            padding-left:20px;
+
+            /* 内容 */
+            background-color: aquamarine;
+            width:400px;
+            height:200px;
+
+            /* 单行文字垂直居中 line-height属性设置为和height相同的值即可 注意：只适用于单行 */
+            line-height:200px;
+
+            /* 边框的精确计算 */
+            box-sizing: border-box;
+
+            /* 背景的覆盖范围 */
+            background-clip: content-box;
+
+            /* 内容溢出边框盒后的处理方式  可以hidden隐藏 也可以scroll滚动 也可以auto需要时才滚动*/
+            /* overflow:hidden; */
+
+            /* 文字截断方式，主要针对英文的显示 换行时的处理方式 */
+            word-break: break-all;
+        }
+
+        .line001{
+            
+            /* display:block; */
+
+            /* margin:3px; */
+
+            /* border:10px solid blue; */
+
+            /* padding:5px; */
+
+            background-color: bisque;
+
+            width:200px;
+
+            height:100px;
+
+        }
+
+        .list001 li
+        {
+            padding-left:10px;
+            margin:1em;
+            border-left:3px solid blue;
+            width:250px;
+
+            /* 以下方法可以设置单行文本在固定宽度显示 超出的部分以三个点的省略号代替的效果 */
+            /* 设置不自动换行 */
+            white-space: nowrap;
+
+            /* 截断处要隐藏 */
+            overflow:hidden;
+
+            /* 文字截断要显示三个点的省略号 */
+            text-overflow: ellipsis;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="block001">
+            块级元素        
+    </div>
+
+    <div class="list001">
+        <ul>
+            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa animi expedita modi totam facere mollitia repellendus vitae voluptas. Nisi, rerum!</li>
+            <li>Reprehenderit, fuga culpa? Sunt harum aperiam quasi error corporis quod vel suscipit, et unde fugit. Repudiandae nobis enim neque facilis.</li>
+            <li>Minus illum recusandae delectus hic distinctio autem aut minima, excepturi saepe itaque quia eveniet incidunt nesciunt facilis ut mollitia velit!</li>
+            <li>Quaerat nihil, obcaecati placeat assumenda nam incidunt tempore, minus iusto, illum vel ipsam sint! Odio vitae quaerat aliquam est totam!</li>
+            <li>Qui ad nobis enim blanditiis consectetur, repudiandae eligendi ipsam eum fuga temporibus laudantium odit excepturi doloribus minima commodi porro! Inventore.</li>
+            <li>Sed quo nostrum, doloremque molestias temporibus dolore laborum unde deserunt cum eaque tempora suscipit modi voluptas dignissimos? Maxime, aspernatur magnam.</li>
+            <li>Obcaecati modi, commodi blanditiis illo odio adipisci consequatur sint odit possimus aperiam repellendus facere dolore sunt atque illum sapiente error.</li>
+            <li>At voluptas atque quidem quo! Possimus provident assumenda fugiat pariatur perspiciatis illo rerum alias facilis culpa, saepe quis repudiandae maxime!</li>
+            <li>Modi quo vero architecto similique. Et sit error illo, nam, non quis quo fuga aut suscipit laborum adipisci debitis magnam!</li>
+            <li>Possimus fuga sequi culpa, maxime ab fugit iure? Eligendi repudiandae perspiciatis totam aliquid necessitatibus nobis animi consequatur recusandae ut vero.</li>
+        </ul>
+    </div>
+
+
+    <!-- <span class="line001">行级元素</span> -->
+
+</body>
+</html>
