@@ -13,7 +13,8 @@ function myOpen(){
     // var b = window.prompt("接受输入窗口") //接受输入窗口
     // var c = window.confirm("确定")  //确定窗口
 
-    console.log("c");
+    // console.log("c");
+    window.alert("这个功能也是非常牛逼!");
 
 }
 
@@ -23,7 +24,7 @@ function myOpen(){
 
 function ShowMessage()
 {
-    console.log("老子牛逼！");
+    // console.log("老子牛逼！");
     window.alert("这是alert窗口!");
 }
 
