@@ -83,6 +83,64 @@
             text-overflow: ellipsis;
         }
 
+        .parent{
+            width: 300px;
+            height:200px;
+            border:5px solid aquamarine;
+            background-color: azure;
+            padding:10px;
+        }
+
+        .child
+        {
+            width:100px;
+            height:100px;
+            border:5px solid red;
+            background-color: blanchedalmond;
+            /* 这里设置margin的左或右 用于内容的水平居中  左右都要设置才能生效*/
+            margin:50px auto;
+            /* margin-left:auto; */
+            /* margin-right:30px; */
+            overflow: hidden;
+
+        }
+
+        .container{
+            /* height:200px; */
+            background-color: cadetblue;
+            /* margin-left:10px; */
+        }
+
+        .container .item{
+            height:50px;
+            line-height: 50px;
+            margin-right:5px;
+            text-align: center;
+            float:left;
+            background-color: rgb(170, 117, 80);
+            width:100px;
+        }
+
+        /* 用于解决高度坍塌问题 */
+        .container .clearfix{
+            clear:left;
+        }
+
+        .article001{
+            width:1800px;
+            background-color: aquamarine;
+            margin:0 auto;
+        }
+
+        .article001 div{
+            background-color: red;
+            /* padding:30px 0; */
+        }
+
+        .article001 img{
+            float:left;
+            padding:10px;
+        }
     </style>
 
 </head>
@@ -98,16 +156,28 @@
             <li>Minus illum recusandae delectus hic distinctio autem aut minima, excepturi saepe itaque quia eveniet incidunt nesciunt facilis ut mollitia velit!</li>
             <li>Quaerat nihil, obcaecati placeat assumenda nam incidunt tempore, minus iusto, illum vel ipsam sint! Odio vitae quaerat aliquam est totam!</li>
             <li>Qui ad nobis enim blanditiis consectetur, repudiandae eligendi ipsam eum fuga temporibus laudantium odit excepturi doloribus minima commodi porro! Inventore.</li>
-            <li>Sed quo nostrum, doloremque molestias temporibus dolore laborum unde deserunt cum eaque tempora suscipit modi voluptas dignissimos? Maxime, aspernatur magnam.</li>
-            <li>Obcaecati modi, commodi blanditiis illo odio adipisci consequatur sint odit possimus aperiam repellendus facere dolore sunt atque illum sapiente error.</li>
-            <li>At voluptas atque quidem quo! Possimus provident assumenda fugiat pariatur perspiciatis illo rerum alias facilis culpa, saepe quis repudiandae maxime!</li>
-            <li>Modi quo vero architecto similique. Et sit error illo, nam, non quis quo fuga aut suscipit laborum adipisci debitis magnam!</li>
-            <li>Possimus fuga sequi culpa, maxime ab fugit iure? Eligendi repudiandae perspiciatis totam aliquid necessitatibus nobis animi consequatur recusandae ut vero.</li>
         </ul>
     </div>
 
+    <div class="parent">
+        <div class="child">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit doloremque, eos possimus iusto saepe quaerat vel, doloribus dignissimos eligendi voluptas soluta labore est odio id, dolor eius expedita optio ut.
+        </div>
+    </div>
 
-    <!-- <span class="line001">行级元素</span> -->
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="article001">
+        <img src="../static/img/IronMan-radius.png" alt="" >
+        <div">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis soluta, sint numquam exercitationem deleniti earum, reprehenderit sunt illo consectetur laboriosam repellat, repudiandae doloribus. Molestiae quo eius aspernatur perspiciatis! Ipsum blanditiis corporis ducimus officia voluptatibus fuga ullam, debitis eos natus animi. Tempore dicta possimus esse officiis fugiat vero. Unde perferendis cum nemo rerum architecto, vel perspiciatis deserunt sint exercitationem similique velit tenetur fuga eaque molestiae quis accusantium quasi facere quibusdam, recusandae odio est, laborum eius esse distinctio! Eaque et sunt accusantium inventore placeat. Impedit, maxime repudiandae at harum omnis ab quasi repellendus voluptatum ad! Voluptatibus mollitia quidem esse, laboriosam, id ipsam nemo porro vel eveniet minima corporis fuga aliquid voluptate eligendi quibusdam accusantium voluptatum, voluptatem iusto animi? Id quasi eaque repudiandae voluptates ipsum repellat doloremque officiis libero dicta reprehenderit aliquam nam, error recusandae possimus officia laboriosam architecto consequatur. Mollitia in ipsam earum nihil repellat quibusdam iste sapiente nam beatae, molestias distinctio provident perspiciatis consectetur dolores optio asperiores ad autem nesciunt nostrum, molestiae voluptatum natus corporis quaerat. Facere aut at magnam itaque sit exercitationem magni, quos nisi explicabo eligendi. Aperiam deleniti dolor vel dignissimos ad quas unde, quam quibusdam voluptatibus eligendi magni sit ea laborum? Optio beatae porro suscipit? Dignissimos dolor excepturi quam provident sint, laboriosam culpa similique optio ad voluptates facilis enim tempora sed, aliquid natus iusto deleniti tenetur dolore sit quidem dicta explicabo nisi? Ab, aliquid! Officiis sunt eveniet dicta natus aliquam quisquam est labore vel assumenda voluptas, ea iste, accusantium delectus quibusdam eius, provident cupiditate aliquid omnis. Alias itaque quo repellendus suscipit, placeat consectetur neque tenetur vero minima blanditiis ex inventore ratione nisi eum corporis praesentium aliquam. Quia soluta qui, facilis deleniti officiis dicta, eaque placeat quos veritatis excepturi suscipit rem aperiam. Repellat, architecto consequuntur velit sunt, commodi debitis numquam, maiores ipsum ipsa soluta dolor ab aperiam. Rerum optio, unde assumenda perferendis in, rem necessitatibus veritatis odio provident quia mollitia officiis nostrum magni dolore quod aperiam repudiandae praesentium pariatur voluptatem quidem sit. Optio ad qui reprehenderit atque sed, ab quas alias sint eum distinctio ex adipisci. Ipsa tempore consequuntur hic iusto dolor. Aliquam voluptates exercitationem et cupiditate! Totam, nulla. Possimus quo, ab amet quasi libero iusto sed explicabo laborum. Officia maiores adipisci libero dolores commodi praesentium itaque labore doloremque nostrum quam sint exercitationem rem assumenda reprehenderit cum rerum quas, iusto minus officiis aperiam quibusdam enim iure ut. Veritatis reiciendis minus animi excepturi corrupti possimus labore quod non aliquam sed fugiat voluptatibus fugit id soluta ipsa maxime exercitationem, sequi incidunt, quos voluptatem praesentium explicabo. Cupiditate dignissimos distinctio temporibus libero debitis rerum dolorem molestiae sed reiciendis aliquam corrupti, odio deserunt animi nihil sequi deleniti maiores illo ullam atque consequuntur recusandae saepe obcaecati! Dolorum dolore odit dolor laudantium repellat tempore, iste quas amet, ipsum molestias eaque ab ipsam numquam, architecto minus consequatur repudiandae ratione. At, atque? Minima dignissimos numquam at. Magnam maiores, perferendis consectetur corporis quod vero qui quam aliquam excepturi illum molestiae sint deserunt sed veniam reiciendis quibusdam suscipit voluptatibus pariatur. Reiciendis libero consequuntur ipsa alias laudantium sequi aliquam nemo, atque autem natus numquam. Reprehenderit quos dolorum commodi sequi totam necessitatibus molestiae expedita et, magni numquam quibusdam officiis! Cum ullam laudantium sapiente! Quis omnis eligendi atque ab dicta, harum vel adipisci optio animi blanditiis saepe velit facilis praesentium impedit autem vitae maiores cum. Incidunt alias dolor aliquam ab eius consequatur rem sunt numquam. Maxime fugiat aperiam officiis eos accusamus accusantium natus sit numquam, reiciendis magnam laboriosam non nisi, iusto ducimus itaque nobis cumque placeat aliquam explicabo, minima voluptatum voluptates. Eius blanditiis asperiores est, assumenda at eveniet deserunt quae quod autem ab quibusdam, ipsam fugiat obcaecati magni excepturi culpa deleniti numquam adipisci?
+        </div">
+    </div>
 
 </body>
 </html>
