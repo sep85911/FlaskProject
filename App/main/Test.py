@@ -268,7 +268,7 @@ if __name__ == "__main__":
     # play_board();]
 
     # Test_Obj();
+    
 
-    t = Test();
-    print(t.Name);
+
 
