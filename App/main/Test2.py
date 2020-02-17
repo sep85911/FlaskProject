@@ -6,6 +6,7 @@ import codecs;
 import xlsxwriter;
 import re
 import os;
+import sys;
 
 if __name__ == "__main__":
 
@@ -19,7 +20,7 @@ if __name__ == "__main__":
     else:
         print("输入错误，结束程序");
 
-    files = os.listdir( "." )
+    files = os.listdir(sys.path[0])
     rr = re.compile('官方___(.+)___(.+).txt')   #正则表达式 用于筛选成组的文件名
     filegroup = {};
 
@@ -54,20 +55,33 @@ if __name__ == "__main__":
                 index = index + 1;
 
             lineIndex = 1;
+            nextAdd = 0;
             for resfile in filegroup[key]:
-                with codecs.open("官方___"+resfile +"___"+key+".txt","r","gb18030") as ff:
+                with codecs.open(sys.path[0]+"\\"+"官方___"+resfile +"___"+key+".txt","r","gb18030") as ff:
                     singleText = ff.readlines();
                     for line in singleText:
-                        resLine = str.split(line[:-1],"	");
-                        rowIndex = 0;
-                        for i in resLine:
-                            if i.isdigit():
-                                worksheet.write_number(lineIndex,rowIndex,int(i));#行 列 内容#
-                            else:
-                                worksheet.write_string(lineIndex,rowIndex,str(i));#行 列 内容#
 
-                            rowIndex = rowIndex + 1;
-                        lineIndex = lineIndex + 1;
+                        if not str.startswith(line,"中游"): 
+
+                            if nextAdd == 1:
+                                nextAdd = 0;
+                                lines = "中游" + line[:-1]
+                            else:
+                                lines = line[:-1];
+
+                            resLine = str.split(lines,"	");
+                            rowIndex = 0;
+                            for i in resLine:
+                                if i.isdigit():
+                                    worksheet.write_number(lineIndex,rowIndex,int(i));#行 列 内容#
+                                else:
+                                    worksheet.write_string(lineIndex,rowIndex,str(i));#行 列 内容#
+
+                                rowIndex = rowIndex + 1;
+                            lineIndex = lineIndex + 1;
+                        else:
+                            nextAdd = 1;
+                        
 
             workbook.close();
     elif txt == 1:
@@ -76,7 +90,7 @@ if __name__ == "__main__":
                 head = "账号	ID	角色	服务器	等级	日期	时间	项目1	项目2\n"
                 f.write(head);
                 for resfile in filegroup[key]:
-                    with codecs.open("官方___"+resfile +"___"+key+".txt","r","gb18030") as ff:
+                    with codecs.open(sys.path[0]+"\\"+"官方___"+resfile +"___"+key+".txt","r","gb18030") as ff:
                         singleText = ff.readlines();
                         for line in singleText:
                             f.write(line);
