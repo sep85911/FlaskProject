@@ -57,7 +57,7 @@ if __name__ == "__main__":
             lineIndex = 1;
             nextAdd = 0;
             for resfile in filegroup[key]:
-                with codecs.open(sys.path[0]+"\\"+"官方___"+resfile +"___"+key+".txt","r","gb18030") as ff:
+                with codecs.open(sys.path[0]+"\\"+"官方___"+ resfile +"___"+key+".txt","r","gb18030") as ff:
                     singleText = ff.readlines();
                     for line in singleText:
 
@@ -72,6 +72,9 @@ if __name__ == "__main__":
                             resLine = str.split(lines,"	");
                             rowIndex = 0;
                             for i in resLine:
+
+                                i = re.sub('[\s+]','',i);   #这里是去掉最后的\r
+
                                 if i.isdigit():
                                     worksheet.write_number(lineIndex,rowIndex,int(i));#行 列 内容#
                                 else:
@@ -86,7 +89,7 @@ if __name__ == "__main__":
             workbook.close();
     elif txt == 1:
         for key in filegroup:
-            with open(key+".txt","w") as f:
+            with codecs.open(key+".txt","w","gb18030") as f:
                 head = "账号	ID	角色	服务器	等级	日期	时间	项目1	项目2\n"
                 f.write(head);
                 for resfile in filegroup[key]:
