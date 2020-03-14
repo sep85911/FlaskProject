@@ -42,6 +42,8 @@ class CCreature(CObject):
     def funcname(self):
         pass
 
+class CTest:
+    __slots__ = ("name","id");
     
 
 
@@ -74,29 +76,16 @@ def log(text):
 def testfunc():
     print("This is testfunc");
 
+
+class CTest002:
+    __slots__ = ["go"];
+
 if __name__ == "__main__":
     
-    obj001 = CObject();
+    obj = CTest002();
+    obj.go = 321;
 
-    obj001.ID = 99999;
-
-    print(obj001.ID);
-
-    obj001.ID = 1234;
-
-    print(obj001.ID)
-    # print(glob.glob(os.curdir + "/*.*"));
-
-    #yy = int(input("请输入年份:"));
-    #mm = int(input("请输入月份:"));
-
-    # noRepeatList = random.sample([i * 10 for i in range(10)],6);#采样 取不重复的n项
-
-    # print(noRepeatList)
-
-    # 显示日历
-
-    # print(calendar.month(yy,mm));
+    print(obj.go);
 
 
 
